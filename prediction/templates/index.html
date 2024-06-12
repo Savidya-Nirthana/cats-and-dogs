@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="img-container">
+        <div class="cat-container">
+          <img class="cat-img" src="{% static 'images/cat.jpg' %}" alt="" />
+        </div>
+        <div class="dog-container">
+          <img class="dog-img" src="{% static 'images/dog.jpg' %}" alt="" />
+        </div>
+        <div class="cnd-container">
+          <img class="cnd-img" src="{% static 'images/cat dog.jpg' %}" alt="" />
+        </div>
+      </div>
+
+      <div class="main-content">
+        <h1 class="welcome-heading">Welcome to the zyper<span style="color: rgb(255, 45, 45);">.ai<span></span></h1>
+        <h2 class="sub-heading">Cat and Dog classifier</h2>
+        <p class="owner">by SAVIDYA</p>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <input type="submit" value="Getting Start" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

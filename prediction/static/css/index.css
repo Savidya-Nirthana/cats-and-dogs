@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-wrapper {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  position: relative;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.dog-container {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+.cat-container {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 50%;
+}
+.cnd-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  z-index: -1;
+}
+
+.cat-img {
+  width: 50vw;
+}
+.dog-img {
+  width: 50vw;
+}
+.cnd-img {
+  width: 100vw;
+}
+
+.main-content {
+  position: absolute;
+  width: 500px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.662);
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-heading {
+  color: rgb(211, 211, 211);
+  text-align: center;
+  width: 100%;
+  background-color: rgba(33, 33, 33, 0.436);
+  border-radius: 20px 20px 0 0;
+  padding: 10px 0 10px 0;
+  font-weight: 400;
+}
+
+.sub-heading {
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 30%;
+}
+.owner {
+  color: rgb(255, 45, 45);
+  font-weight: bold;
+  margin-left: 55%;
+}
+form {
+  width: 100%;
+}
+
+input {
+  background-color: rgb(46, 46, 255);
+  outline: none;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 12px;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, 50%);
+}

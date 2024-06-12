@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/upload.css' %}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="img-container">
+        <div class="cat-container">
+          <img class="cat-img" src="{% static 'images/cat.jpg' %}" alt="" />
+        </div>
+        <div class="dog-container">
+          <img class="dog-img" src="{% static 'images/dog.jpg' %}" alt="" />
+        </div>
+        <div class="cnd-container">
+          <img class="cnd-img" src="{% static 'images/cat dog.jpg' %}" alt="" />
+        </div>
+      </div>
+      <div class="main-container">
+        <h1 class="domain">
+          zyper.<span style="color: rgb(255, 45, 45)">ai</span>
+        </h1>
+        <h1 class="main-title">Cat and Dog classifier</h1>
+        <p class="owner">by SAVIDYA</p>
+        <div class="main-img-container">
+          {% if img_path %}
+          <img class="main-img" src="{{ img_path }}" width="100" alt="" />
+          {% endif %}
+        </div>
+        <br />
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Upload</button>
+        </form>
+        <p class="upload-label">Upload the image</p>
+        <br />
+        {% if prediction %}
+        <h1 class="prediction">{{ prediction }}</h1>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
